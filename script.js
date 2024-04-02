@@ -1,17 +1,25 @@
 var timer = 10;
 var score = 0;
-
+var highscore = 0;
 var hitRn;
 
 function incScore() {
   score += 10;
 
+  if (score > highscore) {
+    highscore = score;
+    document.querySelector("#hval").textContent = highscore;
+  }
+
   document.querySelector("#scoreval").textContent = score;
+  document.querySelector("#hval").textContent = highscore;
 }
+
 function getNewHit() {
   hitRn = Math.floor(Math.random() * 10);
   document.querySelector("#hitval").textContent = hitRn;
 }
+
 function makeBubble() {
   var clutter = "";
 
@@ -48,3 +56,18 @@ document
 runTimer();
 makeBubble();
 getNewHit();
+
+document.querySelector(".again").addEventListener("click", function () {
+  score = 0;
+  document.querySelector("#scoreval").textContent = score;
+  makeBubble();
+  getNewHit();
+  clearInterval();
+  timer = 10;
+  runTimer();
+});
+
+if (score > highscore) {
+  highscore = score;
+  document.querySelector(".highscore").textContent = highscore;
+}
