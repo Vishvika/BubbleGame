@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", cursive;
+
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: url(water_bg.jpeg);
+  width: 100%;
+  height: 100%;
+}
+#main2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#panel {
+  overflow: hidden;
+  width: 80%;
+  height: 82%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+#panelTop {
+  padding: 0px 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(70, 145, 198);
+}
+.elem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.elem h2 {
+  font-weight: 800;
+  font-size: 25px;
+}
+.box {
+  color: rgb(17, 85, 159);
+  font-weight: 600;
+  font-size: 22px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+#panelBtm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+.bubble {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-image: url(BubbleImg.png);
+  background-size: 80px 80px;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.bubble:hover {
+  cursor: pointer;
+  background-image: url(BubbleImgHover.png);
+  background-size: 80px 80px;
+}
